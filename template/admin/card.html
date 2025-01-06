@@ -1,0 +1,27 @@
+
+<div class="posts-container">
+    {% for post in posts %}
+    <div class="post" id="{{post.id}}">
+        <img src="{{ url_for('static', filename='uploads/' ~ post.imagem ) }}" alt="">
+        <h3 id="name">{{post.nome}}</h3>
+        <p id= "description" style="word-wrap: break-word;">{{post.descricao}}</p>
+        <p id="price">R${{post.preco}}</p>
+        <button class="delete-btn">Apagar</button>
+        <button class="edit-name">Mudar nome</button>
+        <button class="edit-price">Mudar preço</button>
+        <button class="edit-description">Mudar Descrição</button>
+        <form class="image-form">
+            <input type="file" name="image" accept="image/*" style="display: none;">
+            <button type="button" class="change-image">Trocar Imagem</button>
+        </form>
+    </div>
+    {% endfor %}
+    <div class="post" style="display: flex;justify-content: center; align-items: center;">
+        <form id="create_post">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="number" name="price" placeholder="Preco" required>
+            <input type="text" name="description" placeholder="Descrição" required>
+            <button type="submit">Criar</button>
+        </form>
+    </div>
+</div>

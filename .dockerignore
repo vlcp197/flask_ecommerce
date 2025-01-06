@@ -1,0 +1,41 @@
+# Byte-compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Version control
+.git/
+.gitignore
+
+# Environment and configuration
+*.env
+*.env.*
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs and local database files
+*.log
+*.sqlite3
+
+# Test coverage and reports
+htmlcov/
+.coverage
+.cache/
+.pytest_cache/
+junit.xml
+reports/
+
+
